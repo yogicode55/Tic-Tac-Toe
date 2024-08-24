@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(to right, #ffeb3b, #ffca28);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    background-color: #000;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 2px solid #fff;
+    color: #ffeb3b;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #212121;
+}
+
+button:disabled {
+    background-color: rgba(204, 204, 204, 0.5);
+    cursor: not-allowed;
+    color: #fff;
+    text-shadow: none;
+}
+
+.reset-container {
+    margin-top: 20px;
+}
+
+.reset-container button {
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: 	#E1C16E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.reset-container button:hover {
+    background-color: #c5a100;
+}
+
+.winner-message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
